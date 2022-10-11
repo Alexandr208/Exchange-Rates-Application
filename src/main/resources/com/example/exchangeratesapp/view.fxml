@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="368.0" style="-fx-background-color: #F3F0FF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exchangeratesapp.Controller">
+   <children>
+      <AnchorPane disable="true" prefHeight="74.0" prefWidth="368.0" style="-fx-background-color: #9889D5;">
+         <children>
+            <Text layoutX="93.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exchange rates">
+               <font>
+                  <Font name="MS Gothic" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="108.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convert Currency">
+         <font>
+            <Font name="MS Gothic" size="19.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="fromValue" layoutX="14.0" layoutY="123.0" prefWidth="150.0" promptText="From" style="-fx-background-color: #BEAFFC;" />
+      <ComboBox fx:id="toValue" layoutX="203.0" layoutY="123.0" prefWidth="150.0" promptText="To" style="-fx-background-color: #BEAFFC;" />
+      <TextField fx:id="amountTextField" layoutX="14.0" layoutY="168.0" promptText="Amount: 1" />
+      <TextField fx:id="dateTextField" layoutX="203.0" layoutY="168.0" promptText="Date: 2022-02-22" />
+      <Text fx:id="errorText" layoutX="109.0" layoutY="215.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount or Date is wrong">
+         <font>
+            <Font name="MS Gothic" size="13.0" />
+         </font>
+      </Text>
+      <Button fx:id="getData" layoutX="108.0" layoutY="232.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #A797E8;" text="Get results">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="rateInfo" layoutX="14.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate: ">
+         <font>
+            <Font name="MS Gothic" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="resultInfo" layoutX="14.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result: ">
+         <font>
+            <Font name="MS Gothic" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="134.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History">
+         <font>
+            <Font name="MS Gothic" size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableInfo" layoutX="-4.0" layoutY="403.0" prefHeight="168.0" prefWidth="372.0" style="-fx-background-color: #9889D5;">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="50.0" style="-fx-background-color: #A797E8;" text="ID" />
+          <TableColumn fx:id="rateColumn" prefWidth="75.0" style="-fx-background-color: #9889D5;" text="Rate" />
+            <TableColumn fx:id="dateColumn" prefWidth="100.0" style="-fx-background-color: #A797E8;" text="Date" />
+            <TableColumn fx:id="resultColumn" prefWidth="145.0" style="-fx-background-color: #9889D5;" text="Result" />
+        </columns>
+      </TableView>
+      <Button fx:id="resetAllTable" layoutX="261.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: #A797E8;" />
+      <Button fx:id="resetOneTable" layoutX="213.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: #A797E8;" />
+   </children>
+</AnchorPane>
